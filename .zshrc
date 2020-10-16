@@ -109,3 +109,17 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Initialize pyenv if installed
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# Update PATH for the Google Cloud SDK.
+if [ -f '/Users/olumide/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/olumide/google-cloud-sdk/path.zsh.inc'; fi
+
+# Enable shell command completion for gcloud.
+if [ -f '/Users/olumide/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/olumide/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Source ZSH syntax highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
