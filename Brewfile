@@ -3,8 +3,10 @@ tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'heroku/brew'
 
 # Binaries
+brew 'asdf'
 brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'bat'
@@ -16,6 +18,7 @@ brew 'git-flow'
 brew 'git'
 brew 'gnupg2'
 brew 'grep'
+brew 'heroku'
 brew 'httpie'
 brew 'hub'
 brew 'jq'
