@@ -41,9 +41,11 @@ ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | zsh
 
-# npm install typescript -g
-# npm install yarn -g
-# npm install serverless -g
+# Install LTS Node (as at this time)
+nvm install 12.19.0
+
+# Install Zsh Pure Prompt
+npm i -g pure-prompt typescript yarn serverless 
 
 # Symlink the Mackup config file to the home directory
 echo "Symlink Mackup config"
