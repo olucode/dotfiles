@@ -38,18 +38,18 @@ mkdir $HOME/code
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
+# Symlink the Mackup config file to the home directory
+echo "Symlink Mackup config"
+ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+
 # Install NVM
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | zsh
 
 # Install LTS Node (as at this time)
 nvm install 12.19.0
 
-# Install Zsh Pure Prompt
-npm i -g pure-prompt typescript yarn serverless 
-
-# Symlink the Mackup config file to the home directory
-echo "Symlink Mackup config"
-ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+# Install npm modules
+npm i -g eslint pure-prompt serverless standard typescript yarn 
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
