@@ -38,16 +38,18 @@ mkdir $HOME/code
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
-# Install NVM
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | zsh
-
-# npm install typescript -g
-# npm install yarn -g
-# npm install serverless -g
-
 # Symlink the Mackup config file to the home directory
 echo "Symlink Mackup config"
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+
+# Install NVM
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | zsh
+
+# Install LTS Node (as at this time)
+nvm install 12.19.0
+
+# Install npm modules
+npm i -g eslint pure-prompt serverless standard typescript yarn 
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
