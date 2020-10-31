@@ -26,8 +26,9 @@ brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'micro'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+brew 'postman'
 brew 'pyenv'
-brew 'stripe'
+brew 'svn'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zsh-syntax-highlighting'
@@ -56,6 +57,7 @@ cask 'slack'
 cask 'spotify'
 cask 'sublime-text'
 cask 'transmission'
+cask 'windscribe'
 cask 'visual-studio-code'
 cask 'vlc'
 
@@ -70,7 +72,6 @@ cask 'qlstephen'
 cask 'font-lato'
 cask 'font-open-sans'
 cask 'font-roboto'
-cask 'font-source-code-pro-for-powerline'
 cask 'font-source-code-pro'
 cask 'font-source-sans-pro'
 cask 'font-source-serif-pro'
