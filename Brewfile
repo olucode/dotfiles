@@ -32,6 +32,7 @@ brew 'svn'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zsh-syntax-highlighting'
+brew 'libpq'
 
 # Development
 brew 'php'
