@@ -35,7 +35,7 @@ ZSH_THEME=""
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
@@ -131,3 +131,7 @@ export NVM_DIR="$HOME/.nvm"
 # oh-my-zsh overrides the prompt, so Pure must be activated after `source $ZSH/oh-my-zsh.sh`
 autoload -U promptinit; promptinit
 prompt pure
+
+# export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
+# export LDFLAGS="-L/usr/local/opt/readline/lib"
+# export CPPFLAGS="-I/usr/local/opt/readline/include"
