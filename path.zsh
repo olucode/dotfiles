@@ -13,3 +13,9 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 #export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 export PATH="/usr/local/opt/libpq/bin:$PATH"
+
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
+
+# Pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"

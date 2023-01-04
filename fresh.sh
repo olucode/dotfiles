@@ -28,10 +28,6 @@ brew bundle
 # echo "Composer install: valet, laravel"
 # /usr/local/bin/composer global require laravel/installer laravel/valet
 
-# Install Laravel Valet
-# echo "Valet install"
-# $HOME/.composer/vendor/bin/valet install
-
 # Create a Code directory
 mkdir $HOME/code
 
@@ -51,10 +47,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | zsh
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Install LTS Node (as at this time)
-nvm install 12.19.0
+nvm install 16
 
 # Install npm modules
-npm i -g eslint pure-prompt standard typescript 
+npm i -g eslint pure-prompt standard typescript @nestjs/cli 
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
