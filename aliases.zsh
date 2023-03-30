@@ -65,3 +65,11 @@ alias redo="git commit -c ORIG_HEAD"
 # Git Flow
 alias gfhf="gch master && git pull && gch develop && git pull && git flow hotfix finish"
 
+alias valtari_test="docker-compose -f docker-compose.yml -f docker-compose.override.yml -f docker-compose-test.yml exec -T valtari-test vendor/bin/codecept run --debug --env docker"
+alias valtari_generate="docker-compose exec valtari php ruckus/generate.php"
+alias valtari_phpunit="docker-compose -f docker-compose.yml -f docker-compose.override.yml -f docker-compose-test.yml exec -T valtari-test vendor/bin/phpunit"
+
+alias ls='lsd'
+
+alias upstream="git pull upstream"
+alias upmaster="upstream master"
