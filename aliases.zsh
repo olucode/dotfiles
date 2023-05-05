@@ -73,3 +73,5 @@ alias ls='lsd'
 
 alias upstream="git pull upstream"
 alias upmaster="upstream master"
+
+alias mtools="ssh mukuru-tools"
