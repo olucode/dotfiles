@@ -35,6 +35,9 @@ mkdir $HOME/code
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
+# Downloads the powerlevel10k ZSH Theme
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+
 # Symlink the Mackup config file to the home directory
 echo "Symlink Mackup config"
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
@@ -50,7 +53,7 @@ export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 nvm install 16
 
 # Install npm modules
-npm i -g eslint pure-prompt standard typescript @nestjs/cli 
+npm i -g eslint standard typescript @nestjs/cli 
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
