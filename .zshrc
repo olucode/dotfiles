@@ -145,7 +145,9 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
 
-eval "$(jump shell)"
+if command -v jump 1>/dev/null 2>&1; then
+  eval "$(jump shell)"
+fi
 
 [[ ! -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]] || source /opt/homebrew/opt/asdf/libexec/asdf.sh
 

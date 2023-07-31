@@ -22,11 +22,13 @@ brew 'heroku'
 brew 'httpie'
 brew 'hub'
 brew 'jq'
-brew 'jumpG'
+brew 'jump'
+brew 'lsd'
 brew 'mackup'
 brew 'mysql-client'
 # brew 'mas' # Mac App Store manager
 brew 'micro'
+brew 'orbstack'
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'pyenv'
 brew 'tor' # Manage the Trash bin
@@ -76,6 +78,7 @@ cask 'windscribe'
 cask 'whatsapp'
 cask 'visual-studio-code'
 cask 'vlc'
+cask 'zoom'
 
 # Quicklook
 cask 'qlcolorcode'

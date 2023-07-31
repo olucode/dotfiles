@@ -5,7 +5,9 @@
 echo "Setting up your Mac..."
 
 echo "Install oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if test ! $(which zsh); then
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+fi
 
 # Check for Homebrew and install if we don't have it
 if test ! $(which brew); then
@@ -21,15 +23,8 @@ echo "Brew Bundle"
 brew tap homebrew/bundle
 brew bundle
 
-# Set default MySQL root password and auth type.
-# mysql -u root -e "ALTER USER root@localhost IDENTIFIED WITH mysql_native_password BY 'password'; FLUSH PRIVILEGES;"
-
-# Install global Composer packages
-# echo "Composer install: valet, laravel"
-# /usr/local/bin/composer global require laravel/installer laravel/valet
-
-# Create a Code directory
-mkdir $HOME/code
+# Create a Code directory (if it doesn't exist)
+[ ! -d "$HOME/code" ] && mkdir $HOME/code
 
 # Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
 rm -rf $HOME/.zshrc
@@ -43,17 +38,22 @@ echo "Symlink Mackup config"
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
 
 # Install NVM
-echo "Install NVM"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | zsh
+if ! command -v nvm &> /dev/null; then
+  echo "Install NVM"
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.36.0/install.sh | zsh
+fi
 
 # Invoke NVM
 export NVM_DIR="$HOME/.nvm" && [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Install LTS Node (as at this time)
-nvm install 16
-
-# Install npm modules
-npm i -g eslint standard typescript @nestjs/cli 
+# Check if node is installed
+if ! command -v node &> /dev/null; then
+  echo "Installing Node"
+  nvm install --lts
+  # Install npm modules
+  npm i -g eslint standard typescript @nestjs/cli 
+fi
 
 # Set macOS preferences
 # We will run this last because this will reload the shell
