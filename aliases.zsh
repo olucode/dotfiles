@@ -68,7 +68,8 @@ alias gfhf="gch master && git pull && gch develop && git pull && git flow hotfix
 # Mukuru Specific
 alias mtools="ssh mukuru-tools"
 alias fullaccess='f() {sudo chmod 777 ruckus/db/migrate/$1 };f'
-alias valtari_test="docker-compose -f docker-compose.yml -f docker-compose.override.yml -f docker-compose-test.yml exec -T valtari-test vendor/bin/codecept run --debug --env docker"
+alias valtari_test="docker-compose -f docker-compose.yml -f docker-compose.override.yml -f docker-compose-test.yml exec -T valtari-test vendor/bin/codecept run --env docker"
+alias valtari_test_debug="docker-compose -f docker-compose.yml -f docker-compose.override.yml -f docker-compose-test.yml exec -T valtari-test vendor/bin/codecept run --debug --env docker"
 alias valtari_generate="docker-compose exec valtari php ruckus/generate.php"
 alias valtari_phpunit="docker-compose -f docker-compose.yml -f docker-compose.override.yml -f docker-compose-test.yml exec -T valtari-test vendor/bin/phpunit"
 alias valtari_migrate="docker-compose exec valtari php ruckus/main.php db:migrate"
@@ -78,3 +79,9 @@ alias ls='lsd'
 
 alias upstream="git pull upstream"
 alias upmaster="upstream master"
+
+alias gjson="ls *.json | grep"
+alias catcop='f() {cat $1 | pbcopy };f'
+
+alias ssh-olucode="ssh-add -D && ssh-add ~/.ssh/id_ed25519_olucode"
+alias ssh-deimos="ssh-add -D && ssh-add ~/.ssh/id_ed25519_2023"
