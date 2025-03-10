@@ -134,7 +134,7 @@ export WORKSPACE="/System/Volumes/Data/Users/olumide/code"
 export NFS=true
 export PHP_CS_FIXER_IGNORE_ENV=1
 
-export DOTNET_ROOT=$HOME/.dotnet
+export DOTNET_ROOT="$HOME/.dotnet"
 
 # Initialize pyenv if installed
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -158,4 +158,4 @@ fi
 # Added by Windsurf
 export PATH="/Users/olumide/.codeium/windsurf/bin:$PATH"
 # Dotnet
-export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"

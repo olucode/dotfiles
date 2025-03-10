@@ -76,6 +76,7 @@ alias valtari_migrate="docker-compose exec valtari php ruckus/main.php db:migrat
 alias valtari_test_migrate="docker-compose exec valtari-test php ruckus/main.php db:migrate"
 alias valtari_code_style="docker-compose exec valtari composer phpcs-valtari-code-style"
 alias valtari_code_style_fix="docker-compose exec valtari composer phpcs-valtari-code-style-fix"
+alias compose-override="docker-compose -f docker-compose.yaml -f docker-compose.override.yaml"
 
 alias ls='lsd'
 
