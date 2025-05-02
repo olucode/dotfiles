@@ -19,3 +19,9 @@ export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
+
+export FLUTTER_ROOT="$HOME/fvm/default/bin"
+export PATH="$FLUTTER_ROOT:$PATH"
+export PATH="$HOME/Library/Android/sdk/emulator:$PATH"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/emulator:$PATH"
