@@ -114,6 +114,15 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export NFS=true
+export PHP_CS_FIXER_IGNORE_ENV=1
+
+# export DOTNET_ROOT="$HOME/.dotnet"
+
 # Update PATH for the Google Cloud SDK.
 if [ -f '/Users/olumide/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/olumide/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -125,16 +134,6 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 # Source ZSH auto suggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-export WORKSPACE="/System/Volumes/Data/Users/olumide/code"
-export NFS=true
-export PHP_CS_FIXER_IGNORE_ENV=1
-
-export DOTNET_ROOT="$HOME/.dotnet"
 
 # Initialize pyenv if installed
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -155,7 +154,14 @@ fi
 
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
 
+source ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
+
 # Added by Windsurf
 export PATH="/Users/olumide/.codeium/windsurf/bin:$PATH"
 # Dotnet
 export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/olumide/.dart-cli-completion/zsh-config.zsh ]] && . /Users/olumide/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
