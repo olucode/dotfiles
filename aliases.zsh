@@ -88,3 +88,5 @@ alias catcop='f() {cat $1 | pbcopy };f'
 
 alias ssh-olucode="ssh-add -D && ssh-add ~/.ssh/id_ed25519_olucode"
 alias ssh-deimos="ssh-add -D && ssh-add ~/.ssh/id_ed25519_2023"
+
+alias flutter="fvm flutter"
