@@ -18,8 +18,13 @@ export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
-
+# Flutter Stuff
 export FLUTTER_ROOT="$HOME/fvm/default/bin"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$FLUTTER_ROOT:$ANDROID_HOME/emulator:$PATH:$HOME/Library/Android/sdk/emulator:$PATH"
 
+# Added by Windsurf
+export PATH="/Users/olumide/.codeium/windsurf/bin:$PATH"
+
+# Dotnet
+export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"

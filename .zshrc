@@ -119,6 +119,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export NFS=true
+export WORKSPACE="$HOME/code"
 export PHP_CS_FIXER_IGNORE_ENV=1
 
 # export DOTNET_ROOT="$HOME/.dotnet"
@@ -150,16 +151,14 @@ if command -v starship 1>/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
-[[ ! -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]] || source /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 [[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+
+[[ ! -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]] || source /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 source ~/.asdf/plugins/dotnet-core/set-dotnet-home.zsh
 
-# Added by Windsurf
-export PATH="/Users/olumide/.codeium/windsurf/bin:$PATH"
-# Dotnet
-export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
+# Set java home
+source ~/.asdf/plugins/java/set-java-home.zsh
 
 export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 

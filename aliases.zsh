@@ -90,3 +90,4 @@ alias ssh-olucode="ssh-add -D && ssh-add ~/.ssh/id_ed25519_olucode"
 alias ssh-mukuru="ssh-add -D && ssh-add ~/.ssh/id_ed25519"
 
 alias flutter="fvm flutter"
+alias awslocal="aws --endpoint-url=http://localhost:4566 --profile local --region us-west-1"
