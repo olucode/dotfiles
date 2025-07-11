@@ -4,10 +4,11 @@ tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
 tap 'heroku/brew'
 tap 'leoafarias/fvm'
+tap 'localstack/tap'
 
 # Binaries
 brew 'asdf'
-# brew 'awscli'
+brew 'awscli'
 brew 'bash' # Latest Bash version
 brew 'bat'
 brew 'coreutils' # Those that come with macOS are outdated
@@ -25,6 +26,7 @@ brew 'hub'
 brew 'jq'
 brew 'jump'
 brew 'kepubify'
+brew 'localstack-cli'
 brew 'lsd'
 brew 'mackup'
 brew 'mysql-client'

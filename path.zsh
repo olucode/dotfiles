@@ -12,16 +12,14 @@ export PATH="node_modules/.bin:vendor/bin:$PATH"
 # referenced in my aliases.zsh file directly.
 #export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
-export PATH="/usr/local/opt/libpq/bin:$PATH"
-
 export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 # Pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+
 export FLUTTER_ROOT="$HOME/fvm/default/bin"
-export PATH="$FLUTTER_ROOT:$PATH"
-export PATH="$HOME/Library/Android/sdk/emulator:$PATH"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
-export PATH="$ANDROID_HOME/emulator:$PATH"
+export PATH="$FLUTTER_ROOT:$ANDROID_HOME/emulator:$PATH:$HOME/Library/Android/sdk/emulator:$PATH"
+

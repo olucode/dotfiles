@@ -161,6 +161,8 @@ export PATH="/Users/olumide/.codeium/windsurf/bin:$PATH"
 # Dotnet
 export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
 
+export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
+
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /Users/olumide/.dart-cli-completion/zsh-config.zsh ]] && . /Users/olumide/.dart-cli-completion/zsh-config.zsh || true
