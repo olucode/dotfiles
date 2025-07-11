@@ -25,3 +25,9 @@ export PATH="$FLUTTER_ROOT:$PATH"
 export PATH="$HOME/Library/Android/sdk/emulator:$PATH"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_HOME/emulator:$PATH"
+
+# Added by Windsurf
+export PATH="/Users/olumide/.codeium/windsurf/bin:$PATH"
+
+# Dotnet
+export PATH="$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools"
