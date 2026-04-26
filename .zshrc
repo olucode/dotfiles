@@ -166,3 +166,18 @@ export CHROME_EXECUTABLE="/Applications/Brave Browser.app/Contents/MacOS/Brave B
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /Users/olumide/.dart-cli-completion/zsh-config.zsh ]] && . /Users/olumide/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
+
+# pnpm
+export PNPM_HOME="/Users/olumide/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun completions
+[ -s "/Users/olumide/.bun/_bun" ] && source "/Users/olumide/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
